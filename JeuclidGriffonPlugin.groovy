@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 the original author or authors.
+ * Copyright 2011-2012 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,31 +18,54 @@
  */
 class JeuclidGriffonPlugin {
     // the plugin version
-    def version = "0.1"
+    String version = '0.2'
     // the version or versions of Griffon the plugin is designed for
-    def griffonVersion = '0.9.3 > *' 
+    String griffonVersion = '0.9.5 > *'
     // the other plugins this plugin depends on
-    def dependsOn = [:]
+    Map dependsOn = [swing: '0.9.5']
     // resources that are included in plugin packaging
-    def pluginIncludes = []
+    List pluginIncludes = []
     // the plugin license
-    def license = 'Apache Software License 2.0'
+    String license = 'Apache Software License 2.0'
     // Toolkit compatibility. No value means compatible with all
     // Valid values are: swing, javafx, swt, pivot, gtk
-    def toolkits = ['swing']
+    List toolkits = ['swing']
     // Platform compatibility. No value means compatible with all
     // Valid values are:
     // linux, linux64, windows, windows64, macosx, macosx64, solaris
-    def platforms = []
+    List platforms = []
+    // URL where documentation can be found
+    String documentation = ''
+    // URL where source can be found
+    String source = 'https://github.com/griffon/griffon-jeuclid-plugin'
 
-    def author = 'Andres Almiray'
-    def authorEmail = 'aalmiray@users.sourceforge.net'
-    def title = 'MathML renderer'
-    def description = '''
-MathML renderer
-http://jeuclid.sourceforge.net
+    List authors = [
+        [
+            name: 'Andres Almiray',
+            email: 'aalmiray@yahoo.com'
+        ]
+    ]
+    String title = 'MathML Renderer'
+    String description = '''
+A MathML rendering plugin via [JEuclid][1].
+
+Usage
+-----
+
+The following nodes will become available on a View script upon installing this plugin
+
+| *Node*      | *Type*                                         |
+| ----------- | ---------------------------------------------- |
+| mathMLViewer| `net.sourceforge.jeuclid.swing.JMathComponent` |
+
+
+### Example
+
+A sample application is available at [https://github.com/aalmiray/griffon_sample_apps/tree/master/misc/jeuclid][2].
+It reproduces the 7 examples available from the JEuclid project site.
+
+[1]: http://jeuclid.sourceforge.net/index.html
+[2]: https://github.com/aalmiray/griffon_sample_apps/tree/master/misc/jeuclid
 '''
-
-    // URL to the plugin's documentation
-    def documentation = 'http://griffon.codehaus.org/Jeuclid+Plugin'
 }
+
