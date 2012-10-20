@@ -19,7 +19,7 @@ import net.sourceforge.jeuclid.swing.JMathComponent
  * @author Andres Almiray
  */
 class JeuclidGriffonAddon {
-    def factories = [
+    Map factories = [
         mathMLViewer: JMathComponent
     ]
 }

@@ -18,11 +18,11 @@
  */
 class JeuclidGriffonPlugin {
     // the plugin version
-    String version = '0.2'
+    String version = '1.0.0'
     // the version or versions of Griffon the plugin is designed for
-    String griffonVersion = '0.9.5 > *'
+    String griffonVersion = '1.0.0 > *'
     // the other plugins this plugin depends on
-    Map dependsOn = [swing: '0.9.5']
+    Map dependsOn = [swing: '1.0.0']
     // resources that are included in plugin packaging
     List pluginIncludes = []
     // the plugin license
@@ -58,7 +58,6 @@ The following nodes will become available on a View script upon installing this 
 | ----------- | ---------------------------------------------- |
 | mathMLViewer| `net.sourceforge.jeuclid.swing.JMathComponent` |
 
-
 ### Example
 
 A sample application is available at [https://github.com/aalmiray/griffon_sample_apps/tree/master/misc/jeuclid][2].
@@ -68,4 +67,3 @@ It reproduces the 7 examples available from the JEuclid project site.
 [2]: https://github.com/aalmiray/griffon_sample_apps/tree/master/misc/jeuclid
 '''
 }
-
